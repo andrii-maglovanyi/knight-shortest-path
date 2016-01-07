@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="/">
+        <noscript>No fun without JavaScript</noscript>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+        <script>
+            System.config({
+                packages: {'/': {defaultExtension: 'js'}}
+            });
+
+            System.import('js/src/index')
+                .then(null, console.error.bind(console));
+        </script>
+    </head>
+    <body>
+        <div id="board"></div>
+    </body>
+</html>

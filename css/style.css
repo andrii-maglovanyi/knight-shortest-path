@@ -1,0 +1,19 @@
+table {
+    border-spacing: 0;
+}
+
+td {
+    cursor: pointer;
+    height: 32px;
+    margin: 0;
+    text-align: center;
+    width: 32px;
+}
+
+.light {
+    background-color: #FFCE9E;
+}
+
+.dark {
+    background-color: #D19B47;
+}

@@ -1,0 +1,6 @@
+node_modules
+.idea
+
+# ignore compiled
+*.js.map
+*.js
