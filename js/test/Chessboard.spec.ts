@@ -35,9 +35,9 @@ describe("Chessboard", () => {
         for (var x: int = 0, row: any; row = table.rows[x]; x++) {
             for (var y: int = 0, col: any; col = row.cells[y]; y++) {
                 if ((x + y) % 2) {
-                    expect(col.className).toEqual('dark');
+                    expect(col.className).toEqual('chessboard__cell chessboard__cell--dark');
                 } else {
-                    expect(col.className).toEqual('light');
+                    expect(col.className).toEqual('chessboard__cell chessboard__cell--light');
                 }
             }
         }

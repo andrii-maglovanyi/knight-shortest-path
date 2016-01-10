@@ -32,6 +32,9 @@ class Chessboard {
             row:any,
             cell:any;
 
+        // Apply a chessboard class to the table
+        table.className = 'chessboard';
+
         // Loop through the amount of rows
         for (var x:number = 0; x < sizeX; x++) {
             // Create an object that represents a row in matrix
@@ -48,9 +51,9 @@ class Chessboard {
 
                 // Define a color of each cell
                 if ((x + y) % 2) {
-                    cell.className = 'dark';
+                    cell.className = 'chessboard__cell chessboard__cell--dark';
                 } else {
-                    cell.className = 'light';
+                    cell.className = 'chessboard__cell chessboard__cell--light';
                 }
             }
         }

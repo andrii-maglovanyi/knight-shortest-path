@@ -1,6 +1,9 @@
 node_modules
 .idea
+.sass-cache/
 
 # ignore compiled
+*.css.map
+*.css
 *.js.map
 *.js

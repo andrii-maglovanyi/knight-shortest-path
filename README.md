@@ -30,22 +30,27 @@ Application's been made using:
 * SystemJS
 * Jasmine
 * Karma
+* Sass
+* BEM
 
 #### Application directory Layout
 
 ```
 css/
-  style.css           	--> default stylesheet
+  sass/
+    modules/
+      chessboard.scss   --> chessboard module
+    app.scss            --> primary Sass file
 js/
   src/
-    Chessboard.js  	    --> build a chessboard (table DOM element) and im-memory two-dimensional matrix that reflects the table
-    index.js            --> main app script (unites other pieces)
-    Knight.js       	--> possible knight moves configuration
-    PathFinder.js       --> shortest path finder
+    Chessboard.ts  	    --> build a chessboard (table DOM element) and im-memory two-dimensional matrix that reflects the table
+    index.ts            --> main app script (unites other pieces)
+    Knight.ts       	--> possible knight moves configuration
+    PathFinder.ts       --> shortest path finder
   test/
-    Chessboard.spec.js
-    Knight.spec.js
-    PathFinder.spec.js
+    Chessboard.spec.ts
+    Knight.spec.ts
+    PathFinder.spec.ts
 index.html              --> the main html
 ```
 
