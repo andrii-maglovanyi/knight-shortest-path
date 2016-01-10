@@ -6,9 +6,9 @@ describe("Knight", () => {
     var knight = new Knight();
 
     it("makes correct moves", () => {
-        for (var i in knight.possibleMoves.x) {
-            var x = knight.possibleMoves.x[i];
-            var y = knight.possibleMoves.y[i];
+        for (var i in knight.possibleMoves['x']) {
+            var x = knight.possibleMoves['x'][i];
+            var y = knight.possibleMoves['y'][i];
 
             if (Math.abs(pageXOffset) == 1) {
                 expect(Math.abs(y)).toEqual(2);

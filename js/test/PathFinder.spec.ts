@@ -7,7 +7,7 @@ import { PathFinder } from "../src/PathFinder";
 
 describe("PathFinder", () => {
     var chessboard = new Chessboard(document.createDocumentFragment(), [8, 8]);
-    var pathFinder = new PathFinder(chessboard.getMatrix(), chessboard.getTable(), new Knight());
+    var pathFinder = new PathFinder(chessboard.matrix, chessboard.table, new Knight());
 
     var dataProvider = [
         {iX: 1, iY: 3, fX: 3, fY: 2, expected: 1},

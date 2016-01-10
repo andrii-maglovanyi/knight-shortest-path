@@ -9,14 +9,14 @@ interface MatrixInterface {
  * Class builds a chessboard DOM structure and creates a matrix, which reflects this structure
  */
 class Chessboard {
-    matrix:MatrixInterface = Object.create(null);
+    private _matrix:MatrixInterface = Object.create(null);
 
     /**
      *
-     * @param canvas        DOM element to append a chessboard table to
+     * @param _canvas       DOM element to append a chessboard table to
      * @param dimensions    Array with a chessboard dimensions (x, y)
      */
-    constructor(public canvas:any, dimensions:number[] ) {
+    constructor(private _canvas:any, dimensions:number[] ) {
         this.buildBoard(dimensions[0], dimensions[1]);
     }
 
@@ -26,7 +26,7 @@ class Chessboard {
      * @param sizeX
      * @param sizeY
      */
-    buildBoard(sizeX:number, sizeY:number) {
+    buildBoard(sizeX:number, sizeY:number): void {
         // Create a table DOM element in memory
         var table:any = document.createElement('table'),
             row:any,
@@ -35,14 +35,14 @@ class Chessboard {
         // Loop through the amount of rows
         for (var x:number = 0; x < sizeX; x++) {
             // Create an object that represents a row in matrix
-            this.matrix[x] = Object.create(null);
+            this._matrix[x] = Object.create(null);
             // Insert a DOM row into a table element
             row = table.insertRow(x);
 
             // Loop through the amount of columns
             for (var y:number = 0; y < sizeY; y++) {
                 // Add a cell to matrix with an initial value of -1
-                this.matrix[x][y] = -1;
+                this._matrix[x][y] = -1;
                 // Insert a DOM cell into a row element
                 cell = row.insertCell(y);
 
@@ -56,18 +56,22 @@ class Chessboard {
         }
 
         // Append constructed table to the DOM element
-        this.canvas.appendChild(table);
+        this._canvas.appendChild(table);
     }
 
     /**
      * Get matrix object
      */
-    getMatrix:any = () => this.matrix;
+    get matrix(): any {
+        return this._matrix
+    };
 
     /**
      * Get DOM table element
      */
-    getTable:any = () => this.canvas.firstChild;
+    get table(): any {
+        return this._canvas.firstChild;
+    }
 }
 
 export { Chessboard };
