@@ -6,4 +6,4 @@ node_modules
 *.css.map
 *.css
 *.js.map
-*.js
+js/**/*.js
