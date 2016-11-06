@@ -1,0 +1,14 @@
+.chessboard {
+  border-spacing: 0; }
+  .chessboard__cell {
+    cursor: pointer;
+    height: 32px;
+    margin: 0;
+    text-align: center;
+    width: 32px; }
+    .chessboard__cell--light {
+      background-color: #FFCE9E; }
+    .chessboard__cell--dark {
+      background-color: #D19B47; }
+
+/*# sourceMappingURL=style.css.map */
